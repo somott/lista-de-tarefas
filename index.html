@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lista de Tarefas</title>
+  <title>Kanban de Tarefas</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="app">
-    <h1>Minha Lista de Tarefas</h1>
+    <h1>Meu Kanban de Tarefas</h1>
 
     <form id="form-tarefa">
       <input
@@ -20,9 +20,22 @@
       <button type="submit">Adicionar</button>
     </form>
 
-    <ul id="lista-tarefas"></ul>
+    <div class="quadro">
+      <section class="coluna" data-coluna="afazer">
+        <h2>A Fazer</h2>
+        <ul class="lista-tarefas" data-coluna="afazer"></ul>
+      </section>
 
-    <p id="mensagem-vazia">Nenhuma tarefa por aqui. Adicione a primeira! 🎉</p>
+      <section class="coluna" data-coluna="fazendo">
+        <h2>Fazendo</h2>
+        <ul class="lista-tarefas" data-coluna="fazendo"></ul>
+      </section>
+
+      <section class="coluna" data-coluna="concluido">
+        <h2>Concluído</h2>
+        <ul class="lista-tarefas" data-coluna="concluido"></ul>
+      </section>
+    </div>
   </main>
 
   <script src="script.js"></script>
